@@ -1,0 +1,131 @@
+		       Assignment-1
+
+			[Answer 1]
+
+Lists and tuples in Python have key differences in mutability and performance:
+Mutability:
+Lists are mutable - you can add, remove, or modify elements after creation
+Tuples are immutable - once created, their elements cannot be changed
+
+Performance:
+Tuples are generally more memory-efficient and slightly faster for operations like iteration
+Lists require more memory due to their dynamic nature
+Tuple lookup operations can be faster since Python can optimize immutable objects
+
+Use cases:
+Choose lists when:
+You need to modify the collection after creation
+You're working with homogeneous data that needs frequent changes
+You need operations like append(), insert(), or sort()
+
+Choose tuples when:
+You want to ensure data cannot be accidentally modified
+You're using the collection as a dictionary key (which requires immutability)
+You're working with fixed data like coordinates or RGB values
+You're passing data that shouldn't be altered between functions
+You want a slight performance advantage for large collections
+The right choice ultimately depends on your specific use case and whether you need mutability or benefit more from immutability.
+
+
+			[Answer 2]
+
+Python handles type conversion between different data types through both implicit and explicit mechanisms.
+
+#Implicit Type Conversion (Coercion) Python automatically converts some types when operations involve different data types:
+Integer to Float: When you perform operations between integers and floats, Python converts integers to floats
+result = 5 + 2.0  # 5 is converted to 5.0, result is 7.0
+
+Boolean to Integer: In numeric contexts, True becomes 1 and False becomes 0
+result = 10 + True  # True is converted to 1, result is 11
+
+
+#Explicit Type Conversion (Type Casting) Python provides built-in functions to convert between types:
+Basic Type Conversions:
+int(3.14)      # 3 (truncates, doesn't round)
+float(42)      # 42.0
+str(123)       # "123"
+bool(0)        # False (0, empty sequences, None values convert to False)
+bool(1)        # True (non-zero values convert to True)
+Sequence Conversions:
+
+list("hello")   # ['h', 'e', 'l', 'l', 'o']
+tuple([1,2,3])  # (1, 2, 3)
+"".join(['a', 'b', 'c'])  # "abc"
+
+#Conversion Limitations and Errors Not all conversions are possible:
+int("hello")  # Raises ValueError
+float("world") # Raises ValueError
+
+When converting complex to simpler types, information may be lost:
+int(3.99)  # 3 (decimal part is lost)
+Special Conversion Methods Custom classes can define special methods to control type conversion:
+__int__(): Controls conversion to int
+__float__(): Controls conversion to float
+__str__(): Controls conversion to string
+__bool__(): Controls conversion to boolean
+Type conversion in Python is generally straightforward but requires care when working with user input or when preserving numeric precision is important.
+
+
+			[Answer 3]
+
+x = 3.5
+x += 10
+print(x)  # Output: 13.5
+
+
+			[Answer 4]
+
+def is_leap_year(year):
+    if year % 100 == 0:
+        return year % 400 == 0
+    else:
+        return year % 4 == 0
+
+def main():
+    try:
+        year = int(input("Enter a year to check if it's a leap year: "))
+        
+        if is_leap_year(year):
+            print(f"{year} is a leap year.")
+        else:
+            print(f"{year} is not a leap year.")
+            
+    except ValueError:
+        print("Please enter a valid year (a whole number).")
+
+if __name__ == "__main__":
+    main()
+
+
+			[Answer 5]
+
+def calculate_grade(mark):
+    if mark >= 90:
+        return "A"
+    elif mark >= 80:
+        return "B"
+    elif mark >= 70:
+        return "C"
+    elif mark >= 60:
+        return "D"
+    else:
+        return "F"
+
+
+def main():
+    try:
+        mark = float(input("Enter your mark (0-100): "))
+
+        if mark < 0 or mark > 100:
+            print("Error: Mark must be between 0 and 100.")
+            return
+
+        grade = calculate_grade(mark)
+        print(f"Your grade is: {grade}")
+
+    except ValueError:
+        print("Error: Please enter a valid numeric mark.")
+
+
+if __name__ == "__main__":
+    main()

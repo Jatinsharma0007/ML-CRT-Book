@@ -1,0 +1,77 @@
+			Assignment-2
+
+			[Answers-1]
+
+source-code: pascals-triangle.py
+
+			[Answers-2]
+
+The continue statement is used within loops (for and while) to skip the remainder of the current iteration and move to the next iteration. When continue is encountered, the loop immediately jumps to the next iteration without executing any remaining code in that iteration.
+
+Key Characteristics:
+• It bypasses the rest of the code inside the loop for the current iteration
+• Useful for avoiding nested conditional logic
+• Helps in filtering or skipping specific iterations without exiting the entire loop
+
+Scenarios Where continue is Beneficial:
+1. When you want to skip processing certain elements without breaking the entire loop
+2. To simplify complex conditional logic
+3. When you want to filter out specific conditions without using nested if-else statements
+4. In data processing where you want to ignore certain elements
+
+Coding Challenge Solution: continue-divisibility.py
+
+def print_divisible_by_three(numbers):
+    for num in numbers:
+        if num % 3 != 0:
+            continue
+        print(num)
+
+numbers = [1, 3, 5, 6, 9, 10, 12, 15, 18]
+print("Numbers divisible by 3:")
+print_divisible_by_three(numbers)
+
+
+
+			[Answers-3]
+
+source-code: pythagorean-triplets.py
+
+
+			[Answers-4]
+
+
+source-code: max-consecutive-sum.py
+
+			[Answers-5]
+
+source-code: list-modification.py
+
+This example illustrates an important concept in Python: lists are mutable objects. When a list is passed to a function, the function receives a reference to the original list, not a copy. This means that modifications made to the list inside the function directly affect the original list.
+
+Key points to note:
+1. The `modify_list()` function appends an item to the input list
+2. The modification is reflected in the original list
+3. No return statement is needed to modify the list
+
+The output will be:
+
+Original list before function call:
+[1, 2, 3, 4, 5]
+Inside the function (after modification):
+[1, 2, 3, 4, 5, 99]
+List after function call:
+[1, 2, 3, 4, 5, 99]
+
+
+This demonstrates that:
+- The list is modified directly in-place
+- Changes inside the function persist outside the function
+- Python passes lists by reference, not by value
+
+Contrast this with immutable types like integers or strings, which cannot be modified in-place by functions.
+
+
+			[Answers-6]
+
+source-code: fibonacci-sequence.py

@@ -1,0 +1,22 @@
+			Assignment-1
+
+			[Questions]
+
+1. How do lists and tuples differ in terms of mutability and 
+performance? When would you choose one over the other? 
+
+2. Explain how Python handles type conversion between different data 
+types, such as between integers and floats or between strings and 
+lists.  
+
+3. Take a number and use the += operator to increase its value by 10. 
+
+4. Write a Python program to check if a given year is a leap year or not. 
+
+5. Write a program that asks the user to enter their marks and displays 
+their grade: 
+• 90-100: A
+• 80-89: B 
+• 70-79: C 
+• 60-69: D 
+• Below 60: F 

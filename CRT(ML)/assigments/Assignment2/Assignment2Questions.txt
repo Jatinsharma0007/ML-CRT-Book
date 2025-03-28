@@ -1,0 +1,30 @@
+				Assignment-2
+
+				[Questions]
+
+1. Write a function pascals_triangle(rows) that prints the first rows of 
+Pascal’s Triangle using nested for loops. 
+pascals_triangle(5)   
+Output: 
+    1 
+   1 1 
+  1 2 1 
+ 1 3 3 1 
+1 4 6 4 1 
+ 
+2. Explain how the `continue` statement works in a loop. What are some 
+scenarios where using `continue` is more beneficial than restructuring 
+the loop?  
+   -  Coding Challenge:  Write a Python program that iterates through a list 
+of numbers and prints only those numbers that are divisible by 3, using 
+the `continue` statement. 
+ 
+3. Use list comprehension to generate all Pythagorean triplets (a, b, c) 
+where a² + b² = c² and a, b, c ≤ 50. 
+ 
+4. Write a function max_consecutive_sum(nums, k) that finds the 
+maximum sum of k consecutive elements in a list. 
+ 
+5. Write a function that takes a list as an argument and modifies it by 
+appending a new item. Demonstrate how changes to the list inside the 
+function affect the list outside the function. 
