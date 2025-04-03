@@ -1,0 +1,100 @@
+Classification:
+log loss 
+catcorial
+
+=====================================================================
+
+Regression:
+
+y_pred - y_actual is known as Residual
+
+---------------------------------------------------------------------
+
+mean square error (MSE):
+
+Formula: MSE = (1/n) * Σ (y_actual - y_pred)^2
+Advantages:
+- It is easy to calculate
+- It is easy to interpret
+- It is easy to compare with other models
+
+Disadvantages:
+- It is sensitive to outliers
+- It is sensitive to the scale of the data
+- It is not robust to non-normality
+
+--------------------------------------------------------------------
+
+Mean Absolute Error (MAE):
+Formula: MAE = (1/n) * Σ |y_actual - y_pred|
+
+Advantages:
+- It is less sensitive to outliers
+- It is less sensitive to the scale of the data
+- It is easy to calculate
+
+Disadvantages:
+- It is not as sensitive to large errors as MSE
+- It is not as easy to interpret as MSE
+- It is not as easy to compare with other models
+
+--------------------------------------------------------------------
+
+Hubble Loss:
+
+Formula: Hubble Loss = (1/n) * Σ (y_actual - y_pred)^2 + (1/n) * Σ |y_actual - y_pred|
+
+Advantages:
+- It is a combination of MSE and MAE
+- It is less sensitive to outliers
+- It is less sensitive to the scale of the data
+
+Disadvantages:
+- It is not as easy to calculate as MSE
+- It is not as easy to interpret as MSE
+- It is not as easy to compare with other models
+
+--------------------------------------------------------------------
+
+Root Mean Square Error (RMSE):
+Formula: RMSE = sqrt((1/n) * Σ (y_actual - y_pred)^2)
+
+=====================================================================
+
+Model Evaluation:
+
+1. Confusion Matrix:
+
+All Cases:-
+                  | Predicted Positive  | Predicted Negative |
+| Actual Positive | TP                  | FP                 |
+| Actual Negative | FN                  | TN                 |
+
+in details:
+- True Positive (TP): Correctly predicted positive cases
+- False Positive (FP): Incorrectly predicted positive cases
+- True Negative (TN): Correctly predicted negative cases
+- False Negative (FN): Incorrectly predicted negative cases
+
+1. Accuracy:
+- Accuracy = (TP + TN) / (TP + TN + FP + FN)
+- It measures the proportion of correct predictions
+- It is a good measure of overall performance
+
+2. Recall:
+- Recall = TP / (TP + FN)
+- It measures the proportion of actual positive cases that were correctly predicted
+- It is a good measure of the model's ability to detect positive cases
+
+3. Precision:
+- Precision = TP / (TP + FP)
+- It measures the proportion of predicted positive cases that were actually positive
+- It is a good measure of the model's ability to avoid false positives
+
+4. final score:
+- F1 score = 2 * (Precision * Recall) / (Precision + Recall)
+- It is a good measure of the model's overall performance
+- It is a good balance between precision and recall
+
+if a person is a cancer patient then what is menat by FP:
+- FP means that the model has incorrectly predicted that the person is a cancer patient when they are not
