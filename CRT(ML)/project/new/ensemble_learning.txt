@@ -1,0 +1,20 @@
+1. voting
+2. Baggging (horizontal)
+3. Boosting (Vertical or sequential)
+4. Stacking
+
+Baggging (horizontal)
+same algo and same model
+eg. random forest(group of decision tree)
+
+Boosting (Vertical or sequential)
+same algo and same model
+eg. Adaboost, xoboosting, gradient boosting
+
+
+Validation: on the bassis of Training and testing score take the best score for further
+* k Fold Validation
+* Cross Validation
+* oob score
+
+criterian: entrophy, gini.
